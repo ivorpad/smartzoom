@@ -1,0 +1,25 @@
+name: SmartZoom
+options:
+  bundleIdPrefix: dev.ivor
+  deploymentTarget:
+    macOS: "15.0"
+targets:
+  SmartZoom:
+    type: application
+    platform: macOS
+    sources: [SmartZoom]
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: dev.ivor.SmartZoom
+        SWIFT_VERSION: "6.0"
+        # Local builds are signed to run locally; scripts/release.sh signs with Developer ID.
+        CODE_SIGN_STYLE: Manual
+        CODE_SIGN_IDENTITY: "-"
+        ENABLE_HARDENED_RUNTIME: YES
+        GENERATE_INFOPLIST_FILE: YES
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        INFOPLIST_KEY_LSUIElement: YES
+        INFOPLIST_KEY_CFBundleDisplayName: SmartZoom
+        INFOPLIST_KEY_NSHumanReadableCopyright: "Copyright © 2026 Ivor Padilla. MIT License."
+        MARKETING_VERSION: "1.0.0"
+        CURRENT_PROJECT_VERSION: "1"
