@@ -2,6 +2,8 @@
 
 # SmartZoom
 
+**[Download SmartZoom-1.0.0.dmg](https://github.com/ivorpad/smartzoom/releases/download/v1.0.0/SmartZoom-1.0.0.dmg)**
+
 Hold Option and scroll to zoom the app under the pointer, the way a trackpad pinch does. Safari, Preview and other apps redraw at full resolution, so text stays sharp. The built-in Accessibility Zoom (Control + scroll) only enlarges screen pixels, which is why it looks blurry.
 
 - **Option + scroll**: zoom in and out (sends pinch gestures)
@@ -17,7 +19,7 @@ Only in apps that handle trackpad pinch and Smart Zoom: Safari, Chrome, Firefox,
 
 ## Install
 
-Download the DMG from [Releases](../../releases), drag SmartZoom to Applications and open it. macOS asks for Accessibility permission (System Settings > Privacy & Security > Accessibility). SmartZoom needs it to read the scroll wheel and post gesture events.
+Open the [DMG](https://github.com/ivorpad/smartzoom/releases/latest), drag SmartZoom to Applications and open it. macOS asks for Accessibility permission (System Settings > Privacy & Security > Accessibility). SmartZoom needs it to read the scroll wheel and post gesture events.
 
 Requires macOS 15 or later. Tested on macOS 27.0.1. The app runs natively on both Apple silicon and Intel.
 
@@ -44,13 +46,7 @@ xcodegen generate
 open SmartZoom.xcodeproj
 ```
 
-Local builds are signed to run locally. To build a release DMG with Developer ID signing:
-
-```sh
-TEAM_ID=XXXXXXXXXX NOTARY_PROFILE=my-profile scripts/release.sh
-```
-
-`NOTARY_PROFILE` is optional and names a `xcrun notarytool store-credentials` profile. With it set, the script notarizes and staples the DMG.
+`scripts/release.sh` builds the release DMG.
 
 ## License
 
