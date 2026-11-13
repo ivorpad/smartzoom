@@ -38,16 +38,6 @@ The field numbers come from [Mac Mouse Fix](https://github.com/noah-nuebling/mac
 
 The app needs Accessibility access, so it can't run in the App Store sandbox.
 
-## Build
-
-```sh
-brew install xcodegen
-xcodegen generate
-open SmartZoom.xcodeproj
-```
-
-`scripts/release.sh` builds the release DMG.
-
 ## License
 
 MIT. The icon artwork in `SmartZoom/AppIcon.icon` is original and under the same license.
